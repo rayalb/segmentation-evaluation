@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "segmentation-evaluation"
+version = "0.1.0"
+description = "A model-independent framework for evaluating semantic segmentation models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [
+    { name = "Package contributors" }
+]
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+images = [
+    "Pillow>=10.0",
+]
+plots = [
+    "matplotlib>=3.7",
+]
+data = [
+    "pandas>=2.0",
+]
+dev = [
+    "pytest>=8.0",
+    "build>=1.2",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
