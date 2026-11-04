@@ -10,6 +10,12 @@ from .expected_cost import (
 
 from .overlap import dice_score, iou_score
 
+from .scoring_rules import (
+    cross_entropy,
+    brier_score,
+    spherical_score,
+)
+
 __all__ = [
     "confusion_matrix",
     "expected_cost",
@@ -18,6 +24,9 @@ __all__ = [
     "transform_cost_matrix",
     "dice_score",
     "iou_score",
+    "cross_entropy",
+    "brier_score",
+    "spherical_score",
 ]
 
 
